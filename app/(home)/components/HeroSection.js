@@ -8,7 +8,7 @@ import LinkedinIcon from "../static/media/linkedin.svg";
 export default function HeroSection() {
   return (
     <div id="home">
-      <div className="absolute top-0 left-0 w-full h-screen bg-white-50">
+      <div className="top-0 left-0 w-full h-screen ">
         <div className="lg:max-w-[800px] max-w-[400px] m-auto lg:ml-[20%] h-full w-full flex flex-col justify-center lg:items-start items-center">
           <h1 className="text-3xl font-bold text-center text-customBlue-400 sm:text-6xl">
             Hi! I'm Clarence Natividad
