@@ -19,8 +19,8 @@ module.exports = {
       colors: {
         customBlue: {
           100: "#021526",
-          200: "#03346E",
-          300: "#6EACDA",
+          200: "#18254E",
+          300: "#7DA4C1",
           400: "#C5DBE9",
         },
         customYellow: {
