@@ -14,7 +14,7 @@ export default function ExperienceItem({
         <li className="flex-grow mb-10 ml-8">
           <div className="absolute w-3 h-3 mt-6 rounded-full bg-customYellow-100 -left-1.5" />
           <div className="p-4 border-2 rounded-lg border-customYellow-100 bg-customBlue-100 group">
-            <p className="px-2 py-1 text-lg font-bold rounded-md text-customBlue-100 bg-customYellow-100">
+            <p className="px-2 py-1 text-lg font-bold rounded-md text-customBlue-100 bg-customYellow-100 w-fit">
               {title}
             </p>
             <p className="flex flex-row flex-wrap items-center justify-between gap-4 mt-1 italic text-md text-customBlue-400">
