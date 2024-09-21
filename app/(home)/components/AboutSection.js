@@ -1,14 +1,20 @@
 "use client";
-import React from "react";
-import Reveal from "../ui/Reveal";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function AboutSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
-    <Reveal>
+    <div id="about">
       <div
-        id="about"
         data-aos="fade-up"
-        className="flex-col flex justify-center mt-2 bg-customBlue-200 w-[70%] m-auto mb-20 rounded-2xl lg:flex-row shadow-lg shadow-customYellow-100/10">
+        className="flex-col flex align-center justify-center mb-24 bg-customBlue-200 w-[70%] m-auto rounded-2xl lg:flex-row hover:shadow-2xl hover:translate-y-20 hover:shadow-customYellow-100/5">
         <div className="h-content md:w-[50%] m-6 md:text-left text-center md:m-10 md:max-lg:w-full md:max-lg:my-4 md:max-lg:mx-0">
           <h1 className="pb-8 text-3xl font-bold md:text-3xl md:pl-2 text-customBlue-400 md:max-lg:px-6">
             About
@@ -62,6 +68,6 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-    </Reveal>
+    </div>
   );
 }
