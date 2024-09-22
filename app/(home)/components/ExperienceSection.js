@@ -1,8 +1,23 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import ExperienceItem from "../ui/ExperienceItem";
 import Reveal from "../ui/Reveal";
+import { SkillHoverItem } from "../ui/SkillHoverItem";
 
 export default function ExperienceSection() {
+  const skills = [
+    {
+      title: "Languages",
+      icons: ["html", "css", "javascript", "dart", "python", "csharp"],
+    },
+    {
+      title: "Frameworks",
+      icons: ["react", "tailwind", "flutter", "sass", "next", "django"],
+    },
+    { title: "Databases", icons: [] },
+    { title: "Tools", icons: [] },
+  ];
+
   const data = [
     {
       title: "Full-Stack Developer Intern",
@@ -39,29 +54,31 @@ export default function ExperienceSection() {
       ],
     },
   ];
+
   return (
-    <div
-      className="flex-col flex justify-center mt-2 w-[70%] m-auto mb-20 rounded-2xl lg:flex-row"
-      id="experience">
-      <div className="m-6 text-center h-content md:text-left">
-        <Reveal>
-          <h1 className="pb-8 text-3xl font-bold md:text-3xl md:pl-2 text-customBlue-400 md:max-lg:px-6">
-            Experience
-          </h1>
-        </Reveal>
-        <div>
-          {data.map((item, idx) => (
-            <ExperienceItem
-              key={idx}
-              company={item.company}
-              title={item.title}
-              year={item.year}
-              tech={item.tech}
-              details={item.details}
-            />
-          ))}
+    <div id="experience">
+      <div className="flex-col flex justify-center mt-2 w-[70%] m-auto rounded-2xl lg:flex-row">
+        <div className="m-6 text-center h-content md:text-left">
+          <Reveal>
+            <h1 className="pb-8 text-3xl font-bold md:text-3xl md:pl-2 text-customBlue-400 md:max-lg:px-6">
+              Experience
+            </h1>
+          </Reveal>
+          <div>
+            {data.map((item, idx) => (
+              <ExperienceItem
+                key={idx}
+                company={item.company}
+                title={item.title}
+                year={item.year}
+                tech={item.tech}
+                details={item.details}
+              />
+            ))}
+          </div>
         </div>
       </div>
+      <SkillHoverItem items={skills}></SkillHoverItem>
     </div>
   );
 }

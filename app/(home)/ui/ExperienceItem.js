@@ -10,10 +10,10 @@ export default function ExperienceItem({
 }) {
   return (
     <Reveal>
-      <ol className="relative flex flex-col pt-3 m-0 border-l md:flex-row border-customYellow-100">
+      <ol className="relative flex flex-col pt-3 m-0 border-l md:flex-row border-customBlue-300">
         <li className="flex-grow mb-10 ml-8">
-          <div className="absolute w-3 h-3 mt-6 rounded-full bg-customYellow-100 -left-1.5" />
-          <div className="p-4 border-2 rounded-lg border-customYellow-100 bg-customBlue-100 group">
+          <div className="absolute w-3 h-3 mt-6 rounded-full bg-customBlue-300 -left-1.5" />
+          <div className="p-4 border-2 rounded-lg border-customBlue-300 bg-customBlue-100 group">
             <p className="px-2 py-1 text-lg font-bold rounded-md text-customBlue-100 bg-customYellow-100 w-fit">
               {title}
             </p>
