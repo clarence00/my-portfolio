@@ -14,8 +14,24 @@ export default function ExperienceSection() {
       title: "Frameworks",
       icons: ["react", "tailwind", "flutter", "sass", "next", "django"],
     },
-    { title: "Databases", icons: [] },
-    { title: "Tools", icons: [] },
+    {
+      title: "Databases",
+      icons: ["sqlite", "firebase", "postgresql"],
+    },
+    {
+      title: "Tools",
+      icons: [
+        "git",
+        "github",
+        "figma",
+        "vscode",
+        "canva",
+        "photoshop",
+        "unity",
+        "androidstudio",
+        "odoo",
+      ],
+    },
   ];
 
   const data = [
