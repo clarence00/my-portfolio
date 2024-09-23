@@ -15,7 +15,7 @@ export default function HeroSection() {
           data-aos="fade-up">
           <div className="lg:max-w-[800px] max-w-[400px] m-auto lg:ml-[20%] h-full w-full flex flex-col justify-center lg:items-start items-center">
             <h1 className="text-3xl font-bold text-center text-customBlue-400 sm:text-6xl">
-              Hi! I'm Clarence Natividad
+              Hi! I&#39;m Clarence Natividad
             </h1>
             <h2 className="text-2xl font-medium text-customBlue-300 sm:text-4xl">
               <TypeAnimation

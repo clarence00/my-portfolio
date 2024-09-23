@@ -120,7 +120,7 @@ export const SkillHoverItem = ({ items, className }) => {
         className
       )}>
       {items.map((item, idx) => (
-        <Reveal>
+        <Reveal key={item?.link || idx}>
           <div
             key={item?.link}
             className="relative group p-2 flex flex-col h-fit"
@@ -154,7 +154,7 @@ export const SkillHoverItem = ({ items, className }) => {
                       const IconComponent = iconMap[icon];
                       return IconComponent ? (
                         <div
-                          key={i}
+                          key={icon}
                           className="relative flex flex-col items-center"
                           onMouseEnter={() => setHoveredIcon(icon)}
                           onMouseLeave={() => setHoveredIcon(null)}>
