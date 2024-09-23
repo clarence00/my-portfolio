@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import ExperienceSection from "./components/ExperienceSection";
+import ProjectSection from "./components/ProjectSection";
+import { ProjectItem } from "./ui/ProjectItem";
 
 export default function page() {
   return (
@@ -11,6 +13,7 @@ export default function page() {
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
+      <ProjectSection />
       <Navbar />
     </div>
   );
