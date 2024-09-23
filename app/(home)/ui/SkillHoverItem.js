@@ -93,7 +93,7 @@ const iconColors = {
   tailwind: "bg-teal-400",
   flutter: "bg-blue-500",
   sass: "bg-pink-500",
-  next: "bg-gray-900",
+  next: "bg-gray-300",
   django: "bg-green-200",
   sqlite: "bg-blue-600",
   postgresql: "bg-indigo-700",
@@ -123,7 +123,7 @@ export const SkillHoverItem = ({ items, className }) => {
         <Reveal key={item?.link || idx}>
           <div
             key={item?.link}
-            className="relative group p-2 flex flex-col h-fit"
+            className="relative flex flex-col p-2 group h-fit"
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}>
             <AnimatePresence>
@@ -145,7 +145,7 @@ export const SkillHoverItem = ({ items, className }) => {
             </AnimatePresence>
             <div className="relative z-50 border-2 rounded-md border-customBlue-300">
               <div className="p-4 group">
-                <div className="text-2xl font-bold tracking-wide text-customYellow-100 text-center">
+                <div className="text-2xl font-bold tracking-wide text-center text-customYellow-100">
                   {item.title}
                 </div>
                 {item.icons && item.icons.length > 0 ? (
@@ -155,15 +155,15 @@ export const SkillHoverItem = ({ items, className }) => {
                       return IconComponent ? (
                         <div
                           key={icon}
-                          className="relative flex flex-col items-center"
+                          className="relative flex flex-col items-center group"
                           onMouseEnter={() => setHoveredIcon(icon)}
                           onMouseLeave={() => setHoveredIcon(null)}>
                           <div className="p-1 rounded-lg ">
-                            <IconComponent className="w-12 h-12" />
+                            <IconComponent className="w-12 h-12 hover:-translate-y-2 hover:scale-110" />
                           </div>
                           {hoveredIcon === icon && (
                             <div
-                              className={`absolute z-20 translate-y-14 mt-1.5 text-sm rounded-lg p-1 text-customBlue-100 ${iconColors[icon]}`}>
+                              className={`absolute text-center z-20 translate-y-14 mt-1.5 text-sm rounded-lg p-1 text-customBlue-100 ${iconColors[icon]}`}>
                               {iconNames[icon]}
                             </div>
                           )}

@@ -73,7 +73,7 @@ export default function ExperienceSection() {
 
   return (
     <div id="experience">
-      <div className="flex-col flex justify-center mt-2 w-[70%] m-auto rounded-2xl lg:flex-row">
+      <div className="flex-col flex justify-center mt-8 w-[70%] m-auto rounded-2xl lg:flex-row">
         <div className="m-6 text-center h-content md:text-left">
           <Reveal>
             <h1 className="pb-8 text-3xl font-bold md:text-3xl md:pl-2 text-customBlue-400 md:max-lg:px-6">
@@ -94,7 +94,9 @@ export default function ExperienceSection() {
           </div>
         </div>
       </div>
-      <SkillHoverItem items={skills}></SkillHoverItem>
+      <SkillHoverItem
+        className="pb-20"
+        items={skills}></SkillHoverItem>
     </div>
   );
 }

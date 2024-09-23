@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="fixed z-20 flex flex-col items-center justify-center w-full h-screen bg-black/50">
           <a
             onClick={handleNav}
-            href="#main"
+            href="#home"
             className="w-[75%] flex justify-center item-center rounded-full shadow-lg bg-customYellow-100  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
             <IoHome
               size={20}
@@ -30,7 +30,7 @@ export default function Navbar() {
           </a>
           <a
             onClick={handleNav}
-            href="#main"
+            href="#about"
             className="w-[75%] flex justify-center item-center rounded-full shadow-lg bg-customYellow-100  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
             <IoPerson
               size={20}
@@ -40,7 +40,7 @@ export default function Navbar() {
           </a>
           <a
             onClick={handleNav}
-            href="#main"
+            href="#experience"
             className="w-[75%] flex justify-center item-center rounded-full shadow-lg bg-customYellow-100  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
             <IoStar
               size={20}
@@ -50,7 +50,7 @@ export default function Navbar() {
           </a>
           <a
             onClick={handleNav}
-            href="#main"
+            href="#projects"
             className="w-[75%] flex justify-center item-center rounded-full shadow-lg bg-customYellow-100  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
             <IoNewspaper
               size={20}
