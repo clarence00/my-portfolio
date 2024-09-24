@@ -18,9 +18,6 @@ export default function ProjectSection() {
 
   const projects = projectsData.map((project) => ({
     ...project,
-    icon: project.icon.map((iconName) =>
-      iconName === "react-color.svg" ? ReactIcon : PythonIcon
-    ),
     images: importAllImages(project.images || []),
   }));
 
@@ -45,7 +42,9 @@ export default function ProjectSection() {
             <div className="grid justify-center grid-cols-3 gap-6">
               {projects.map((project, idx) => (
                 <Reveal key={idx}>
-                  <div onClick={() => handleClick(idx)}>
+                  <div
+                    className="h-full p-4 border-2 border-green-500 rounded-lg"
+                    onClick={() => handleClick(idx)}>
                     <ProjectItem
                       title={project.title}
                       date={project.date}

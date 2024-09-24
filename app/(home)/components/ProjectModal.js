@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+import { Icon } from "lucide-react";
 
 export default function ProjectModal({ project, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,11 +37,11 @@ export default function ProjectModal({ project, onClose }) {
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
       onClick={handleBackdropClick}>
       <div className="relative w-[40%] rounded-lg shadow-lg shadow-black bg-customBlue-100">
-        <div>
+        <div className="flex justify-center rounded-lg align-center">
           <Image
             src={project.images[currentIndex]}
             alt={project.title}
-            className="w-full rounded-t-lg bg-customYellow-100"
+            className="object-contain w-auto h-96"
           />
         </div>
 
@@ -75,7 +76,7 @@ export default function ProjectModal({ project, onClose }) {
         </ul>
 
         <div className="m-4">
-          <p className="text-sm text-customBlue-400">{project.description}</p>
+          <p className="text-sm text-customBlue-300">{project.description}</p>
         </div>
       </div>
     </div>
