@@ -43,7 +43,7 @@ export default function ProjectSection() {
               {projects.map((project, idx) => (
                 <Reveal key={idx}>
                   <div
-                    className="h-full p-4 border-2 border-green-500 rounded-lg"
+                    className="p-4 border-2 border-green-500 rounded-lg"
                     onClick={() => handleClick(idx)}>
                     <ProjectItem
                       title={project.title}
