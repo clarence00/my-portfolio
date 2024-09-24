@@ -1,0 +1,25 @@
+[
+    {
+      "title": "IMO Database System",
+      "date": "2024",
+      "tag": ["Django", "SQLite"],
+      "icon": ["react-color.svg", "python-color.svg"],
+      "description": "Project #1 for academics",
+      "images": ["project1/1.png", "project1/2.jpg"]
+    },
+    {
+      "title": "Let Me Cook",
+      "date": "2023-2024",
+      "tag": ["Flutter", "Firebase", "Figma"],
+      "icon": ["react-color.svg", "python-color.svg"],
+      "description": "Project #2 for academics"
+    },
+    {
+      "title": "Math Connect",
+      "date": "2022",
+      "tag": ["C#", "Unity", "Photoshop", "Android Studio"],
+      "icon": ["react-color.svg", "python-color.svg"],
+      "description": "Project #3 for academics"
+    }
+  ]
+  
