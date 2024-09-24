@@ -12,7 +12,7 @@ export default function ProjectItem({ title, date, tag, icon, images }) {
           className="object-cover rounded-lg"
         />
       </div>
-      <div className="flex justify-between px-4 mt-2">
+      <div className="flex justify-between px-2 mt-2">
         <h2 className="text-lg font-bold text-customBlue-400">{title}</h2>
         <h3 className="text-md text-customBlue-400">{date}</h3>
       </div>
