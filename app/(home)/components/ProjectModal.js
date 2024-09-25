@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { iconMap, iconColors, iconNames } from "../ui/SkillHoverItem";
-import { motion, AnimatePresence } from "framer-motion";
-import Slider from "react-slick";
+import { motion } from "framer-motion";
 
 export default function ProjectModal({ project, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,16 +25,6 @@ export default function ProjectModal({ project, onClose }) {
     }
   };
 
-  const handleDragEnd = (event, info) => {
-    if (info.offset.x < -50) {
-      // Drag left, go to the next image
-      handleNext();
-    } else if (info.offset.x > 50) {
-      // Drag right, go to the previous image
-      handlePrev();
-    }
-  };
-
   return (
     <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
@@ -51,13 +40,10 @@ export default function ProjectModal({ project, onClose }) {
         transition={{ duration: 0.3 }}>
         <div className="flex justify-center rounded-lg align-center relative">
           <motion.div
-            className="w-full h-96"
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            onDragEnd={handleDragEnd}
-            initial={{ x: 300, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -300, opacity: 0 }}>
+            className="w-full h-96 flex justify-center"
+            initial={{ y: 300, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -300, opacity: 0 }}>
             <Image
               src={project.images[currentIndex]}
               alt={project.title}

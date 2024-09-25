@@ -37,12 +37,12 @@ export default function ProjectSection() {
               Projects
             </h1>
           </Reveal>
-          <div className="pb-20 border-2 border-customBlue-400">
+          <div className="pb-20">
             <div className="grid justify-center grid-cols-3 gap-6">
               {projects.map((project, idx) => (
                 <Reveal key={idx}>
                   <div
-                    className="p-4 border-2 border-green-500 rounded-lg"
+                    className="p-4 border-2 border-customBlue-200 rounded-lg"
                     onClick={() => handleClick(idx)}>
                     <ProjectItem
                       title={project.title}
