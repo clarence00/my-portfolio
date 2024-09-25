@@ -116,7 +116,7 @@ export const SkillHoverItem = ({ items, className }) => {
   return (
     <div
       className={cn(
-        "grid justify-center grid-cols-2 w-[70%] m-auto mt-10 gap-x-4 gap-y-8 px-1",
+        "grid justify-center md:grid-cols-2 w-[70%] m-auto mt-10 gap-x-4 gap-y-8 px-1 grid-cols-1",
         className
       )}>
       {items.map((item, idx) => (

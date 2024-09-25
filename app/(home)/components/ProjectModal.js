@@ -33,21 +33,21 @@ export default function ProjectModal({ project, onClose }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}>
       <motion.div
-        className="relative w-[50%] rounded-lg shadow-lg shadow-black bg-customBlue-100 pb-4"
+        className="lg:w-[50%] w-[80%] rounded-lg shadow-lg shadow-black bg-customBlue-100 pb-4"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.8, opacity: 0 }}
         transition={{ duration: 0.3 }}>
-        <div className="flex justify-center rounded-lg align-center relative">
+        <div className="flex justify-center rounded-lg ">
           <motion.div
-            className="w-full h-96 flex justify-center"
+            className="w-full md:h-96 h-60 flex justify-center"
             initial={{ y: 300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -300, opacity: 0 }}>
             <Image
               src={project.images[currentIndex]}
               alt={project.title}
-              className="object-contain w-auto h-96 rounded-lg"
+              className="object-contain w-auto md:h-96 h-60 rounded-lg"
             />
           </motion.div>
         </div>
@@ -69,7 +69,7 @@ export default function ProjectModal({ project, onClose }) {
           {project.images.map((_, idx) => (
             <div
               key={idx}
-              className={`w-3 h-3 mx-1 rounded-full ${
+              className={`md:w-3 md:h-3 w-2 h-2 mx-1 rounded-full ${
                 idx === currentIndex ? "bg-customBlue-400" : "bg-customBlue-200"
               }`}
             />

@@ -38,7 +38,7 @@ export default function ProjectSection() {
             </h1>
           </Reveal>
           <div className="pb-20">
-            <div className="grid justify-center grid-cols-3 gap-6">
+            <div className="grid justify-center lg:grid-cols-3 gap-6 grid-cols-1">
               {projects.map((project, idx) => (
                 <Reveal key={idx}>
                   <div
