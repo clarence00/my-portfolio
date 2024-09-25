@@ -31,7 +31,7 @@ export default function ProjectSection() {
 
   return (
     <div id="projects">
-      <div className="justify-center mt-20 w-[70%] m-auto rounded-2xl lg:flex-row">
+      <div className="justify-center mt-20 w-[80%] m-auto rounded-2xl lg:flex-row">
         <div className="m-6 text-center h-content md:text-left">
           <Reveal>
             <h1 className="pb-8 text-3xl font-bold md:text-3xl md:pl-2 text-customBlue-400 md:max-lg:px-6">

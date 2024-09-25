@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { iconMap, iconColors, iconNames } from "../ui/SkillHoverItem";
 import Slider from "react-slick";
-import { Icon } from "lucide-react";
 
 export default function ProjectModal({ project, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  let [hoveredIcon, setHoveredIcon] = useState(null);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
@@ -36,7 +37,7 @@ export default function ProjectModal({ project, onClose }) {
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
       onClick={handleBackdropClick}>
-      <div className="relative w-[40%] rounded-lg shadow-lg shadow-black bg-customBlue-100">
+      <div className="relative w-[50%] rounded-lg shadow-lg shadow-black bg-customBlue-100 pb-4">
         <div className="flex justify-center rounded-lg align-center">
           <Image
             src={project.images[currentIndex]}
@@ -65,18 +66,31 @@ export default function ProjectModal({ project, onClose }) {
           <h3 className="text-md text-customBlue-400">{project.date}</h3>
         </div>
 
-        <ul className="px-2 text-sm font-bold text-customBlue-100">
-          {project.tag.map((tags, idx) => (
-            <li
-              key={idx}
-              className="inline-block px-2 py-1 m-1 rounded-full bg-customBlue-300">
-              {tags}
-            </li>
-          ))}
-        </ul>
-
         <div className="m-4">
           <p className="text-sm text-customBlue-300">{project.description}</p>
+        </div>
+
+        <div className="flex px-2">
+          {project.icon.map((icons, idx) => {
+            const IconComponent = iconMap[icons];
+            return IconComponent ? (
+              <div
+                key={idx}
+                className="relative flex flex-col items-center group"
+                onMouseEnter={() => setHoveredIcon(icons)}
+                onMouseLeave={() => setHoveredIcon(null)}>
+                <div className="p-1 rounded-lg ">
+                  <IconComponent className="w-10 h-10 p-1 rounded-lg bg-customBlue-300/[0.3] hover:-translate-y-2 hover:scale-110" />
+                </div>
+                {hoveredIcon === icons && (
+                  <div
+                    className={`absolute text-center z-20 translate-y-14 mt-1.5 text-sm rounded-lg p-1 text-customBlue-100 ${iconColors[icons]}`}>
+                    {iconNames[icons]}
+                  </div>
+                )}
+              </div>
+            ) : null;
+          })}
         </div>
       </div>
     </div>

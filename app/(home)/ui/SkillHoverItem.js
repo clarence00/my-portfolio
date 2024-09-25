@@ -28,7 +28,7 @@ import OdooIcon from "../static/assets/odoo-color.svg";
 import { useState } from "react";
 import Reveal from "./Reveal";
 
-const iconMap = {
+export const iconMap = {
   html: HtmlIcon,
   css: CssIcon,
   javascript: JavaScriptIcon,
@@ -55,7 +55,7 @@ const iconMap = {
   odoo: OdooIcon,
 };
 
-const iconNames = {
+export const iconNames = {
   html: "HTML",
   css: "CSS",
   javascript: "JavaScript",
@@ -82,7 +82,7 @@ const iconNames = {
   odoo: "Odoo",
 };
 
-const iconColors = {
+export const iconColors = {
   html: "bg-orange-500",
   css: "bg-blue-500",
   javascript: "bg-yellow-400",
@@ -150,7 +150,7 @@ export const SkillHoverItem = ({ items, className }) => {
                 </div>
                 {item.icons && item.icons.length > 0 ? (
                   <div className="flex flex-wrap justify-center gap-2 px-4 pt-4">
-                    {item.icons.map((icon, i) => {
+                    {item.icons.map((icon) => {
                       const IconComponent = iconMap[icon];
                       return IconComponent ? (
                         <div

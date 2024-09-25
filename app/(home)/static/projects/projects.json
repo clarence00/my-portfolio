@@ -3,7 +3,7 @@
       "title": "IMO Database System",
       "date": "2024",
       "tag": ["Django", "SQLite", "Figma"], 
-      "icon": ["django-color.svg", "sqlite-color.svg", "figma-color.svg"],
+      "icon": ["django", "sqlite", "figma"],
       "description": "IMO Doba (IMO Docubase) is a digitized document database system, relying on inputs from the Raspberry Pi which utlizes Optical Character Recognition, to recognize texts and automatically name files accordingly.'\n' The system was developed by our group in thesis and my role involved creating the design layout of the web in Figma, handling the database and frontend side of web using SQLite and Django.",
       "images": ["imodatabase/1.png", "imodatabase/2.png", "imodatabase/3.png", "imodatabase/4.png", "imodatabase/5.png"
     ]
@@ -12,7 +12,7 @@
       "title": "Let Me Cook",
       "date": "2023-2024",
       "tag": ["Flutter", "Firebase", "Figma"],
-      "icon": ["react-color.svg", "python-color.svg"],
+      "icon": ["flutter", "firebase", "figma"],
       "description": "Let Me Cook is a social media application designed for users can share and search recipes.'\n' The app was developed by a team of four. My role involved creating assets and designing wireframes in Figma, handling the frontend widget interaction in Flutter, and managing database structure in Firebase",
       "images": ["letmecook/1.jpg", "letmecook/2.jpg", "letmecook/3.jpg", "letmecook/4.jpg", "letmecook/5.jpg", "letmecook/6.jpg", "letmecook/7.jpg", "letmecook/8.png"]
     },
@@ -20,7 +20,7 @@
       "title": "Math Connect",
       "date": "2022",
       "tag": ["C#", "Unity", "Photoshop", "Android Studio"],
-      "icon": ["react-color.svg", "python-color.svg"],
+      "icon": ["csharp", "unity", "photoshop", "androidstudio"],
       "description": "Math Connect is an educational puzzle game designed for users who wants to learn basic math operations. This is the first game development app we have done for our project.'\n' The game was my idea inspired from the different pixel style and io games I have found in the internet. In this project, I created all of the assets and animations in Photoshop, lead the development of both frontend and backend side of the game.",
       "images": ["mathconnect/1.jpg", "mathconnect/2.jpg", "mathconnect/3.jpg", "mathconnect/4.jpg", "mathconnect/6.png", "mathconnect/7.png", "mathconnect/8.png", "mathconnect/8.png"]
     }

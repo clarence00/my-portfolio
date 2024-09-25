@@ -1,14 +1,16 @@
-import React from "react";
-
+"use client";
+import React, { useState } from "react";
+import { iconMap, iconColors, iconNames } from "../ui/SkillHoverItem";
 import Image from "next/image";
 
-export default function ProjectItem({ title, date, tag, icon, images }) {
+export default function ProjectItem({ title, date, icon, images }) {
+  let [hoveredIcon, setHoveredIcon] = useState(null);
+
   return (
     <div>
-      <div className="flex justify-center w-full h-60">
+      <div className="flex justify-center h-52">
         <Image
           src={images[0]}
-          alt={title}
           className="object-cover rounded-lg"
         />
       </div>
@@ -17,13 +19,28 @@ export default function ProjectItem({ title, date, tag, icon, images }) {
         <h3 className="text-md text-customBlue-400">{date}</h3>
       </div>
       <div className="flex flex-nowrap">
-        {tag.map((tags, idx) => (
-          <div
-            key={idx}
-            className="px-2 py-1 m-1 text-sm text-center rounded-full h-fit text-customBlue-100 bg-customBlue-300">
-            {tags}
-          </div>
-        ))}
+        <div className="flex">
+          {icon.map((icons, idx) => {
+            const IconComponent = iconMap[icons];
+            return IconComponent ? (
+              <div
+                key={idx}
+                className="relative flex flex-col items-center group"
+                onMouseEnter={() => setHoveredIcon(icons)}
+                onMouseLeave={() => setHoveredIcon(null)}>
+                <div className="p-1 rounded-lg ">
+                  <IconComponent className="w-10 h-10 p-1 rounded-lg hover:-translate-y-2 hover:scale-110" />
+                </div>
+                {hoveredIcon === icons && (
+                  <div
+                    className={`absolute text-center z-20 translate-y-14 mt-1.5 text-sm rounded-lg p-1 text-customBlue-100 ${iconColors[icons]}`}>
+                    {iconNames[icons]}
+                  </div>
+                )}
+              </div>
+            ) : null;
+          })}
+        </div>
       </div>
     </div>
   );
