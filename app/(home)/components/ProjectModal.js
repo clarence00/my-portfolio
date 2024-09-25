@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { iconMap, iconColors, iconNames } from "../ui/SkillHoverItem";
+import { motion, AnimatePresence } from "framer-motion";
 import Slider from "react-slick";
 
 export default function ProjectModal({ project, onClose }) {
@@ -25,25 +26,44 @@ export default function ProjectModal({ project, onClose }) {
     }
   };
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+  const handleDragEnd = (event, info) => {
+    if (info.offset.x < -50) {
+      // Drag left, go to the next image
+      handleNext();
+    } else if (info.offset.x > 50) {
+      // Drag right, go to the previous image
+      handlePrev();
+    }
   };
 
   return (
-    <div
+    <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
-      onClick={handleBackdropClick}>
-      <div className="relative w-[50%] rounded-lg shadow-lg shadow-black bg-customBlue-100 pb-4">
-        <div className="flex justify-center rounded-lg align-center">
-          <Image
-            src={project.images[currentIndex]}
-            alt={project.title}
-            className="object-contain w-auto h-96"
-          />
+      onClick={handleBackdropClick}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}>
+      <motion.div
+        className="relative w-[50%] rounded-lg shadow-lg shadow-black bg-customBlue-100 pb-4"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.8, opacity: 0 }}
+        transition={{ duration: 0.3 }}>
+        <div className="flex justify-center rounded-lg align-center relative">
+          <motion.div
+            className="w-full h-96"
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            onDragEnd={handleDragEnd}
+            initial={{ x: 300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -300, opacity: 0 }}>
+            <Image
+              src={project.images[currentIndex]}
+              alt={project.title}
+              className="object-contain w-auto h-96 rounded-lg"
+            />
+          </motion.div>
         </div>
 
         <div className="flex justify-between px-4 my-2">
@@ -57,6 +77,17 @@ export default function ProjectModal({ project, onClose }) {
             onClick={handleNext}>
             &#8250;
           </button>
+        </div>
+
+        <div className="flex justify-center my-2">
+          {project.images.map((_, idx) => (
+            <div
+              key={idx}
+              className={`w-3 h-3 mx-1 rounded-full ${
+                idx === currentIndex ? "bg-customBlue-400" : "bg-customBlue-200"
+              }`}
+            />
+          ))}
         </div>
 
         <div className="flex justify-between px-4">
@@ -92,7 +123,7 @@ export default function ProjectModal({ project, onClose }) {
             ) : null;
           })}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

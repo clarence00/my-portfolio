@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Reveal from "../ui/Reveal";
-import ReactIcon from "../static/assets/react-color.svg";
-import PythonIcon from "../static/assets/python-color.svg";
+import { AnimatePresence, motion } from "framer-motion";
 import ProjectItem from "../ui/ProjectItem";
 import ProjectModal from "./ProjectModal";
 import projectsData from "../static/projects/projects.json";
@@ -61,13 +60,15 @@ export default function ProjectSection() {
           </div>
         </div>
       </div>
-
-      {expandedProject !== null && (
-        <ProjectModal
-          project={projects[expandedProject]}
-          onClose={handleClose}
-        />
-      )}
+      <AnimatePresence>
+        {expandedProject !== null && (
+          <ProjectModal
+            key={expandedProject}
+            project={projects[expandedProject]}
+            onClose={handleClose}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
