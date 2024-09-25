@@ -27,7 +27,10 @@ export default function HeroSection() {
               />
             </h2>
             <div className="flex mt-2">
-              <a href="#">
+              <a
+                href="mailto:clrncntvdd@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer">
                 <div className="flex flex-col items-center w-10 gap-2 group">
                   <GmailIcon
                     className="duration-200 ease-in group-hover:-translate-y-2 group-hover:scale-125 group-hover:fill-gmail-100 fill-customYellow-100"
@@ -38,7 +41,10 @@ export default function HeroSection() {
                   </div>
                 </div>
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/clarence00"
+                target="_blank"
+                rel="noopener noreferrer">
                 <div className="flex flex-col items-center w-10 gap-2 group">
                   <GithubIcon
                     className="duration-200 ease-in group-hover:-translate-y-2 group-hover:scale-125 group-hover:fill-github-100 fill-customYellow-100"
@@ -49,7 +55,10 @@ export default function HeroSection() {
                   </div>
                 </div>
               </a>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/clarence-c-natividad-068476251/"
+                target="_blank"
+                rel="noopener noreferrer">
                 <div className="flex flex-col items-center w-10 gap-2 group">
                   <LinkedinIcon
                     className="duration-200 ease-in group-hover:-translate-y-2 group-hover:scale-125 group-hover:fill-linkedin-100 fill-customYellow-100"
