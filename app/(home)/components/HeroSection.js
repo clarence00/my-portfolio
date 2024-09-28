@@ -17,7 +17,7 @@ export default function HeroSection() {
           </h1>
           <h2 className="text-2xl font-medium text-customBlue-300 sm:text-4xl">
             <TypeAnimation
-              sequence={["Web Designer", 2000, "Front-end Developer", 2000]}
+              sequence={["Web Designer", 2000, "Developer", 2000]}
               wrapper="div"
               cursor={true}
               repeat={Infinity}
