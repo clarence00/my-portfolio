@@ -39,6 +39,7 @@ export default function ExperienceSection() {
       title: "Full-Stack Developer Intern",
       company: "Achieve Without Borders, Inc,",
       year: "August 2023 - September 2023",
+      link: "https://achievewithoutborders.com/",
       tech: [
         "React JS",
         "Python",
@@ -62,6 +63,7 @@ export default function ExperienceSection() {
       title: "Graphic Designer and Digital Marketing Intern",
       company: "I-Map Websolutions, Inc,",
       year: "August 2022 - September 2022",
+      link: "https://www.imapwebsolutions.com/",
       tech: ["Photoshop", "Canva"],
       details: [
         "Collaborated with a team to design ad posters and promotional materials for an e-commerce platform",
@@ -87,6 +89,7 @@ export default function ExperienceSection() {
                 company={item.company}
                 title={item.title}
                 year={item.year}
+                link={item.link}
                 tech={item.tech}
                 details={item.details}
               />

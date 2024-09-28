@@ -5,12 +5,13 @@ export default function ExperienceItem({
   title,
   company,
   year,
+  link,
   tech,
   details,
 }) {
   return (
     <Reveal>
-      <ol className="relative md:flex flex-col md:pt-3 md:m-0 md:border-l md:flex-row md:border-customBlue-300">
+      <ol className="relative flex-col md:flex md:pt-3 md:m-0 md:border-l md:flex-row md:border-customBlue-300">
         <li className="flex-grow mb-10 md:ml-8">
           <div className="absolute w-3 h-3 mt-6 rounded-full bg-customBlue-300 -left-1.5" />
           <div className="p-4 border-2 rounded-lg border-customBlue-300 bg-customBlue-100 group">
@@ -18,7 +19,12 @@ export default function ExperienceItem({
               {title}
             </p>
             <p className="flex flex-row flex-wrap items-center justify-between gap-4 mt-1 italic text-md text-customBlue-400">
-              <a href="#">{company}</a>
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer">
+                {company}
+              </a>
               <span className="">{year}</span>
             </p>
             <div className="flex flex-wrap gap-2 mt-4 mb-2">

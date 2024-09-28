@@ -30,7 +30,9 @@ export default function AboutSection() {
         <div className="md:w-[50%] flex md:max-lg:flex-row flex-col py-2 md:pr-2 justify-center items-center md:max-lg:w-[100%] md:max-lg:pr-0">
           <div className="p-4 m-4 mb-2 rounded-xl bg-customBlue-100 h-content w-[85%] md:max-lg:py-4 md:max-lg:m-4">
             <a
-              href="#"
+              href="https://www.pup.edu.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-bold text-md text-customBlue-400 md:text-lg">
               Polytechnic University of the Philippines
             </a>
@@ -45,7 +47,9 @@ export default function AboutSection() {
           </div>
           <div className="p-4 m-4 mt-2 bg-customBlue-100 h-content rounded-xl w-[85%] md:max-lg:py-6 md:max-lg:m-4">
             <a
-              href="#"
+              href="https://www.rhspasig.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-bold text-md text-customBlue-400 md:text-lg">
               Rizal High School
             </a>

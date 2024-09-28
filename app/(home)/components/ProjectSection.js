@@ -38,21 +38,25 @@ export default function ProjectSection() {
             </h1>
           </Reveal>
           <div className="pb-20">
-            <div className="grid justify-center lg:grid-cols-3 gap-6 grid-cols-1">
+            <div className="grid justify-center grid-cols-1 gap-6 lg:grid-cols-3">
               {projects.map((project, idx) => (
-                <Reveal key={idx}>
-                  <div
-                    className="p-4 border-2 border-customBlue-200 rounded-lg"
-                    onClick={() => handleClick(idx)}>
-                    <ProjectItem
-                      title={project.title}
-                      date={project.date}
-                      tag={project.tag}
-                      icon={project.icon}
-                      description={project.description}
-                      expanded={expandedProject === idx}
-                      images={project.images}
-                    />
+                <Reveal
+                  key={idx}
+                  className="group">
+                  <div className="p-2 rounded-lg hover:bg-customBlue-300/50 hover:scale-105">
+                    <div
+                      className="z-10 p-4 border-2 rounded-lg cursor-pointer border-customBlue-200"
+                      onClick={() => handleClick(idx)}>
+                      <ProjectItem
+                        title={project.title}
+                        date={project.date}
+                        tag={project.tag}
+                        icon={project.icon}
+                        description={project.description}
+                        expanded={expandedProject === idx}
+                        images={project.images}
+                      />
+                    </div>
                   </div>
                 </Reveal>
               ))}
